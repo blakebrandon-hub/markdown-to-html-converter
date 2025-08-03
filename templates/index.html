@@ -205,7 +205,7 @@
       placeCaretAtEnd(htmlColored);
     });
 
-fetch('http://localhost:5000/static/readme_sample.md')  // OR /readme if you used the custom route
+fetch('https://md-to-html-7cf556bc3722.herokuapp.com/static/readme_sample.md')  // OR /readme if you used the custom route
   .then(res => res.text())
   .then(data => {
     mdColored.innerText = data;
@@ -217,3 +217,4 @@ fetch('http://localhost:5000/static/readme_sample.md')  // OR /readme if you use
   </script>
 </body>
 </html>
+
