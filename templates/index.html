@@ -87,10 +87,6 @@
 
       </div>
 
-
-
-      
-
       <div class="col-md-4">
         <label class="form-label text-light">HTML (Auto-generated)</label>
             <button class="btn btn-sm btn-outline-light me-2" style="float: right;" onclick="copyHTML()">📋 Copy</button>
@@ -175,6 +171,14 @@
 }
 
 
+function copyHTML() {
+  const temp = document.createElement('textarea');
+  temp.value = htmlColored.innerText; // or use innerHTML for raw HTML
+  document.body.appendChild(temp);
+  temp.select();
+  document.execCommand('copy');
+  temp.remove();
+}
 
 
     function placeCaretAtEnd(el) {
@@ -217,4 +221,5 @@ fetch('https://md-to-html-7cf556bc3722.herokuapp.com/static/readme_sample.md')  
   </script>
 </body>
 </html>
+
 
